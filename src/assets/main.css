@@ -6,6 +6,19 @@
     margin: 0 auto;
     font-weight: normal;
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e;
+    border-radius: 100px;
+}
 
 section {
     margin-top: 64px !important;
@@ -50,6 +63,9 @@ ion-icon {
 .justify-between {
     justify-content: space-between;
 }
+.justify-center {
+    justify-content: center;
+}
 
 .shadow {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -75,6 +91,7 @@ ul {
     grid-auto-rows: 1fr;
     grid-gap: 62px;
     padding: 0;
+    margin-bottom: 62px;
 }
 
 .list .item {
@@ -111,4 +128,19 @@ ul {
 
 .item .detail span {
     padding: 5px;
+}
+.spin{
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
