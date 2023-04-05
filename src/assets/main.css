@@ -19,11 +19,17 @@ ion-icon {
 .flex{
   display: flex;
 }
+.inline-block{
+  display: inline-block;
+}
 
 .items-center{
   align-items: center;
 }
 .items-stretch{
+  align-items: stretch;
+}
+.items-start{
   align-items: stretch;
 }
 
@@ -41,6 +47,10 @@ ul{
 }
 .w-100{
   width: 100%;
+}
+
+.w-50{
+  width: 50%;
 }
 
 
