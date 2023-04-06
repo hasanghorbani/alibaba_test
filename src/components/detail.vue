@@ -63,11 +63,11 @@ watch([() => route.params.id], get_country)
 					<li><strong>Top Level Domain:</strong><span> {{ detail.tld.join(', ') }}</span></li>
 					<li><strong>Currencies:</strong>
 						<span v-for="(item, index) in detail.currencies" :key="index">
-            {{ item.name }} <template v-if="index != (detail.currencies.length - 1)">,</template>
+            {{ item.name }} <template v-if="index !== Number(Object.keys(detail.currencies).length - 1)" >,</template>
           </span>
 					</li>
 					<li><strong>Languages:</strong> <span v-for="(item, index) in detail.languages" :key="index">
-            {{ item }} <template v-if="index != (detail.languages.length - 1)">,</template>
+            {{ item }} <template v-if="index !== Number(Object.keys(detail.languages).length - 1)">,</template>
           </span></li>
 				</ul>
 			</div>
